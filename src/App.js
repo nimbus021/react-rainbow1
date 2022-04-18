@@ -14,19 +14,23 @@ function App(){
     
     let colorMap = colors.map((color, i) => {
         return (
-            <ColorBlock color={color} />
+            <ColorBlock key = {i} color={color} />
         )
     })
 
-    return (
-      <div className="App">
-      {colors.map((color, i) => 
-          <ColorBlock key= color={color} />
-      )}
-  </div>
-  
-    )
 }
 
+const addColor = (newColor) => {
+    setColors([...colors, newColor])
+}
+
+return (
+    <div className="App">
+        {colorMap}
+        <ColorForm addColor={addColor}
+        </div>
+        
+    
+)
 
 export default App;
